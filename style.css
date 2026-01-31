@@ -1,0 +1,276 @@
+/* Fonts */
+:root {
+    --primary-color: #E31E24;
+    --bs-primary: #E31E24;
+    --bs-primary-rgb: 227, 30, 36;
+    --secondary-color: #212529;
+    --light-bg: #f8f9fa;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    color: #444;
+    /* Slightly softer than pure black */
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: #111;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-black {
+    background-color: #000 !important;
+}
+
+/* Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar */
+.navbar-brand img {
+    transition: transform 0.3s;
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+    .navbar-brand img {
+        height: 85px;
+    }
+}
+
+.nav-link {
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: color 0.3s;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--primary-color);
+    margin: 4px auto 0;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 0;
+    /* Premium dark gradient backup or overlay */
+    background: radial-gradient(circle at 10% 20%, rgb(255, 255, 255) 0%, rgb(242, 246, 250) 90%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    box-shadow: 0 4px 15px rgba(227, 30, 36, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c21318;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(227, 30, 36, 0.4);
+}
+
+#glass-frames .btn-outline-dark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Scrolling Notification */
+.marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.btn-outline-dark {
+    border-width: 2px;
+    font-weight: 600;
+}
+
+/* Cards (Services & Products) */
+.service-card,
+.product-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.service-card:hover,
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+    border-color: transparent;
+}
+
+.icon-box {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(227, 30, 36, 0.1) !important;
+    /* Light Red bg */
+    color: var(--primary-color);
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.service-card:hover .icon-box {
+    transform: scale(1.1);
+    background: var(--primary-color) !important;
+    color: #fff;
+}
+
+/* Google Reviews */
+.google-review-card {
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    border-radius: 20px !important;
+}
+
+.google-review-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+    transform: translateY(-3px);
+}
+
+.colored-google-icon {
+    background: linear-gradient(45deg, #4285F4, #DB4437, #F4B400, #0F9D58);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Footer */
+footer {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.footer-link {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #fff;
+}
+
+/* Utilities */
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+/* Glass Frame Categories */
+.frame-category-card {
+    height: 400px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.frame-category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Changed to contain so the glasses don't get cut off weirdly, assuming white bg matches */
+    padding: 2rem;
+    transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.frame-category-card:hover img {
+    transform: scale(1.05);
+}
+
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 100%);
+    opacity: 1;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+/* Glass Frame Cards Enhanced */
+.frame-category-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* Slightly more visible border */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    /* Better default shadow */
+}
+
+.frame-category-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    /* Lift effect */
+    border-color: rgba(227, 30, 36, 0.3);
+    /* Subtle primary color border on hover */
+}

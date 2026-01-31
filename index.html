@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kazhcha Opticals | Clear Vision, Stylish Look</title>
+
+  <!-- Meta/SEO -->
+  <meta name="description"
+    content="Kazhcha Opticals - Premier optical shop providing eye testing, premium frames, sunglasses, and contact lenses." />
+  <!-- Favicon -->
+  <link rel="icon" href="logo.jpg" type="image/jpeg" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- 
+    === FUTURE PROMOTION TEMPLATES === 
+    Uncomment the sections below when you want to show discounts or offers.
+    -->
+
+  <!-- 1. Top Notification Bar (Dynamic) -->
+  <div id="top-notification-bar" class="bg-primary text-white py-1 overflow-hidden" style="display: none;">
+    <div class="container-fluid p-0">
+      <div class="marquee-wrapper">
+        <div class="marquee-content fw-bold ls-1" id="notification-text">
+          <!-- Content injected from js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.jpg" alt="Kazhcha Opticals Logo" class="me-2" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#glass-frames">Frames</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-primary rounded-pill px-4" href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 hero-content fade-in-up">
+          <h1 class="display-4 fw-bold mb-4">
+            See the World <br /><span class="text-primary">With Clarity</span>
+          </h1>
+          <p class="lead mb-4 text-secondary">
+            Experience precision eye care and discover a wide range of stylish
+            frames and sunglasses tailored just for you.
+          </p>
+          <div class="d-flex flex-column flex-sm-row gap-3">
+            <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-4 px-lg-5">Book Appointment</a>
+            <a href="#products" class="btn btn-outline-dark btn-lg rounded-pill px-4 px-lg-5">View Collection</a>
+          </div>
+        </div>
+        <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+          <!-- Placeholder for Hero Image -->
+          <img
+            src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Stylish Glasses" class="img-fluid rounded-4 shadow-lg hero-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Special Offer Section (Dynamic) -->
+  <section id="offers" class="py-5 bg-primary text-white" style="display: none;">
+    <div class="container text-center" id="discount-content">
+      <!-- Content will be injected from frames_data.js -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container py-lg-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="shop_interior.png" alt="Optical Shop Display" class="img-fluid rounded-4 shadow" />
+        </div>
+        <div class="col-lg-6 ps-lg-5">
+          <h6 class="text-primary text-uppercase fw-bold ls-1">About Us</h6>
+          <h2 class="fw-bold mb-4">About Kazhcha Opticals</h2>
+          <p class="text-muted mb-4">
+            At Kazhcha Opticals, we are dedicated to preserving and enhancing
+            your vision. With years of experience in the optical industry, we
+            bring you the latest in lens technology and eyewear fashion.
+          </p>
+          <p class="text-muted mb-4">
+            Our team of certified optometrists ensures that your eye health is
+            our top priority. Whether you need a comprehensive eye exam or the
+            perfect pair of frames, we are here to help.
+          </p>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2">
+              <i class="fa-solid fa-check-circle text-primary me-2"></i>
+              Certified Optometrists
+            </li>
+            <li class="mb-2">
+              <i class="fa-solid fa-check-circle text-primary me-2"></i>
+              Latest Lens Technology
+            </li>
+            <li class="mb-2">
+              <i class="fa-solid fa-check-circle text-primary me-2"></i> Wide
+              Range of Frames
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <div class="container py-lg-5">
+      <div class="text-center mb-5">
+        <h6 class="text-primary text-uppercase fw-bold ls-1">Our Services</h6>
+        <h2 class="fw-bold">Comprehensive Eye Care</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card p-4 rounded-4 h-100 text-center bg-white border hover-shadow transition">
+            <div
+              class="icon-box mb-4 text-primary bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center"
+              style="width: 80px; height: 80px">
+              <i class="fa-solid fa-eye fa-2x"></i>
+            </div>
+            <h4 class="fw-bold mb-3">Eye Testing</h4>
+            <p class="text-muted">
+              Professional eye examinations using state-of-the-art equipment
+              for accurate prescriptions.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card p-4 rounded-4 h-100 text-center bg-white border hover-shadow transition">
+            <div
+              class="icon-box mb-4 text-primary bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center"
+              style="width: 80px; height: 80px">
+              <i class="fa-solid fa-glasses fa-2x"></i>
+            </div>
+            <h4 class="fw-bold mb-3">Frame Fitting</h4>
+            <p class="text-muted">
+              Expert assistance in selecting frames that complement your face
+              shape and style.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card p-4 rounded-4 h-100 text-center bg-white border hover-shadow transition">
+            <div
+              class="icon-box mb-4 text-primary bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center"
+              style="width: 80px; height: 80px">
+              <i class="fa-solid fa-screwdriver-wrench fa-2x"></i>
+            </div>
+            <h4 class="fw-bold mb-3">Repair Services</h4>
+            <p class="text-muted">
+              Quick and reliable repair services for your broken frames and
+              adjustments.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="service-card p-4 rounded-4 h-100 text-center bg-white border hover-shadow transition">
+            <div
+              class="icon-box mb-4 text-primary bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center"
+              style="width: 80px; height: 80px">
+              <i class="fa-solid fa-eye-dropper fa-2x"></i>
+            </div>
+            <h4 class="fw-bold mb-3">Contact Lenses</h4>
+            <p class="text-muted">
+              Wide variety of contact lenses including daily disposables and
+              colored lenses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Glass Frames Section -->
+  <section id="glass-frames" class="py-5 bg-light">
+    <div class="container py-lg-5">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <h6 class="text-primary text-uppercase fw-bold ls-1">Premium Eyewear</h6>
+          <h2 class="fw-bold mb-0">Find Your Perfect Frame Style</h2>
+        </div>
+        <div class="col-lg-6 text-lg-end mt-3 mt-lg-0">
+          <a href="#products" class="btn btn-outline-dark rounded-pill px-4">View All Collections</a>
+        </div>
+      </div>
+
+
+      <div class="row g-4 justify-content-center" id="frames-container">
+        <!-- Content will be loaded dynamically from frames_data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Gallery -->
+  <section id="products" class="py-5 bg-light">
+    <div class="container py-lg-5">
+      <div class="text-center mb-5">
+        <h6 class="text-primary text-uppercase fw-bold ls-1">
+          Our Collection
+        </h6>
+        <h2 class="fw-bold">Trending Eyewear</h2>
+      </div>
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              class="card-img-top" alt="Sunglasses" />
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Classic Aviators</h5>
+              <p class="card-text text-muted">
+                Timeless style for sunny days.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1591076482161-42ce6da69f67?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              class="card-img-top" alt="Frames" />
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Modern Round Frames</h5>
+              <p class="card-text text-muted">Chic and sophisticated look.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card product-card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1577803645773-f96470509666?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              class="card-img-top" alt="Reading Glasses" />
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Premium Readers</h5>
+              <p class="card-text text-muted">
+                Comfortable reading experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="#contact" class="btn btn-primary rounded-pill px-5">Visit Store to See More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container py-lg-5">
+      <div class="text-center mb-5">
+        <h6 class="text-primary text-uppercase fw-bold ls-1">Testimonials</h6>
+        <h2 class="fw-bold">What Our Customers Say</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Review 1 -->
+              <div class="carousel-item active">
+                <div class="google-review-card bg-white p-4 rounded-4 shadow-sm mx-auto" style="max-width: 600px">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://lh3.googleusercontent.com/a/default-user" alt="User" class="rounded-circle me-3"
+                      width="48" height="48" />
+                    <div>
+                      <h5 class="fw-bold mb-0">Rahul K.</h5>
+                      <small class="text-muted">Local Guide · 15 reviews</small>
+                    </div>
+                    <div class="ms-auto">
+                      <i class="fa-brands fa-google colored-google-icon fa-2x"></i>
+                    </div>
+                  </div>
+                  <div class="mb-3 text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="text-dark">
+                    "Excellent service! The eye test was very thorough and
+                    they helped me pick a frame that really suits my face.
+                    Highly recommended!"
+                  </p>
+                </div>
+              </div>
+              <!-- Review 2 -->
+              <div class="carousel-item">
+                <div class="google-review-card bg-white p-4 rounded-4 shadow-sm mx-auto" style="max-width: 600px">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://lh3.googleusercontent.com/a/default-user" alt="User" class="rounded-circle me-3"
+                      width="48" height="48" />
+                    <div>
+                      <h5 class="fw-bold mb-0">Anjali M.</h5>
+                      <small class="text-muted">Local Guide · 8 reviews</small>
+                    </div>
+                    <div class="ms-auto">
+                      <i class="fa-brands fa-google colored-google-icon fa-2x"></i>
+                    </div>
+                  </div>
+                  <div class="mb-3 text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="text-dark">
+                    "Kazhcha Opticals fixed my broken glasses in no time. Very
+                    professional and friendly staff. Will definitely come
+                    back."
+                  </p>
+                </div>
+              </div>
+              <!-- Review 3 -->
+              <div class="carousel-item">
+                <div class="google-review-card bg-white p-4 rounded-4 shadow-sm mx-auto" style="max-width: 600px">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://lh3.googleusercontent.com/a/default-user" alt="User" class="rounded-circle me-3"
+                      width="48" height="48" />
+                    <div>
+                      <h5 class="fw-bold mb-0">Vivek S.</h5>
+                      <small class="text-muted">Local Guide · 22 reviews</small>
+                    </div>
+                    <div class="ms-auto">
+                      <i class="fa-brands fa-google colored-google-icon fa-2x"></i>
+                    </div>
+                  </div>
+                  <div class="mb-3 text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="text-dark">
+                    "Best optical shop in Manarcadu! Great collection of
+                    frames and the eye testing was very precise."
+                  </p>
+                </div>
+              </div>
+              <!-- Review 4 -->
+              <div class="carousel-item">
+                <div class="google-review-card bg-white p-4 rounded-4 shadow-sm mx-auto" style="max-width: 600px">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://lh3.googleusercontent.com/a/default-user" alt="User" class="rounded-circle me-3"
+                      width="48" height="48" />
+                    <div>
+                      <h5 class="fw-bold mb-0">Priya R.</h5>
+                      <small class="text-muted">Local Guide · 5 reviews</small>
+                    </div>
+                    <div class="ms-auto">
+                      <i class="fa-brands fa-google colored-google-icon fa-2x"></i>
+                    </div>
+                  </div>
+                  <div class="mb-3 text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="text-dark">
+                    "Superb customer service. I got my progressive lenses from
+                    here and they are perfect. Highly recommend!"
+                  </p>
+                </div>
+              </div>
+              <!-- Review 5 -->
+              <div class="carousel-item">
+                <div class="google-review-card bg-white p-4 rounded-4 shadow-sm mx-auto" style="max-width: 600px">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://lh3.googleusercontent.com/a/default-user" alt="User" class="rounded-circle me-3"
+                      width="48" height="48" />
+                    <div>
+                      <h5 class="fw-bold mb-0">Suresh N.</h5>
+                      <small class="text-muted">Local Guide · 10 reviews</small>
+                    </div>
+                    <div class="ms-auto">
+                      <i class="fa-brands fa-google colored-google-icon fa-2x"></i>
+                    </div>
+                  </div>
+                  <div class="mb-3 text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="text-dark">
+                    "Friendly staff and a great selection of contact lenses.
+                    My vision has never been clearer!"
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="https://maps.app.goo.gl/CoYMAfN9ZgGRBYed7" target="_blank"
+          class="btn btn-outline-primary rounded-pill px-4">
+          <i class="fa-brands fa-google me-2"></i>Write a Review on Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-dark text-white">
+    <div class="container py-lg-5">
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <h6 class="text-primary text-uppercase fw-bold ls-1 mb-3">
+            Get in Touch
+          </h6>
+          <h2 class="fw-bold mb-4">Visit Us Today</h2>
+          <p class="text-white-50 mb-4">
+            We are conveniently located in Manarcadu. Drop by for a visit or
+            schedule an appointment using the form.
+          </p>
+
+          <div class="d-flex mb-3">
+            <div class="me-3 text-primary">
+              <i class="fa-solid fa-location-dot fa-xl"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-1">Location</h5>
+              <p class="text-white-50">
+                Manarcadu, Kavumpady, Kottayam - 686019
+              </p>
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <div class="me-3 text-primary">
+              <i class="fa-solid fa-phone fa-xl"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-1">Phone</h5>
+              <p class="text-white-50">+91 96451 21017, +91 94967 21017</p>
+            </div>
+          </div>
+          <div class="d-flex mb-3">
+            <div class="me-3 text-primary">
+              <i class="fa-solid fa-envelope fa-xl"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold mb-1">Email</h5>
+              <p class="text-white-50">okazhcha@gmail.com</p>
+            </div>
+          </div>
+
+          <!-- Map Container -->
+          <div class="ratio ratio-16x9 mt-4 rounded-4 overflow-hidden border border-secondary">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.928553825043!2d76.5870794!3d9.601420599999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b062d002d8c22f7%3A0x9d838032945ba7ad!2sKAZHCHA%20OPTICALS!5e0!3m2!1sen!2sin!4v1769707018706!5m2!1sen!2sin"
+              width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-white text-dark p-4 p-md-5 rounded-4 shadow-lg">
+            <h3 class="fw-bold mb-4">Send us a Message</h3>
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control bg-light border-0 py-3" id="name" placeholder="John Doe" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control bg-light border-0 py-3" id="email"
+                  placeholder="name@example.com" />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control bg-light border-0 py-3" id="phone"
+                  placeholder="+91 90000 00000" />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message / Service Needed</label>
+                <textarea class="form-control bg-light border-0 py-3" id="message" rows="4"
+                  placeholder="I would like to book an eye test..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill fw-bold">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white pt-5 pb-4 border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Column 1: Brand -->
+        <div class="col-lg-4 text-center text-lg-start">
+          <a class="navbar-brand mb-3 d-block" href="#">
+            <img src="logo.jpg" alt="Logo" height="50" />
+          </a>
+          <p class="text-white-50">
+            Providing world-class eye care and premium eyewear in Kottayam.
+            Visit us for a comprehensive vision experience.
+          </p>
+          <div class="d-flex justify-content-center justify-content-lg-start mt-4">
+            <a href="#" class="text-white text-decoration-none me-3"><i class="fa-brands fa-facebook fa-lg"></i></a>
+            <a href="#" class="text-white text-decoration-none me-3"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white text-decoration-none me-3"><i class="fa-brands fa-twitter fa-lg"></i></a>
+            <a href="#" class="text-white text-decoration-none"><i class="fa-brands fa-whatsapp fa-lg"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-4 text-center text-lg-start">
+          <h5 class="fw-bold mb-3 text-primary">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Us</a></li>
+            <li><a href="#services" class="footer-link">Our Services</a></li>
+            <li><a href="#products" class="footer-link">Collections</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div class="col-lg-4 text-center text-lg-start">
+          <h5 class="fw-bold mb-3 text-primary">Contact Us</h5>
+          <p class="text-white-50 mb-2">
+            <i class="fa-solid fa-location-dot me-2 text-primary"></i>
+            Manarcadu, Kavumpady, Kottayam
+          </p>
+          <p class="text-white-50 mb-2">
+            <i class="fa-solid fa-phone me-2 text-primary"></i> +91 96451
+            21017
+          </p>
+          <p class="text-white-50">
+            <i class="fa-solid fa-envelope me-2 text-primary"></i>
+            okazhcha@gmail.com
+          </p>
+        </div>
+      </div>
+      <div class="text-center border-top border-secondary pt-4 mt-4">
+        <small class="text-white-50">&copy; 2026 Kazhcha Opticals. All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="frames_data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

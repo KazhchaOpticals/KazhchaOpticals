@@ -7,35 +7,67 @@ const frameCategories = [
         id: 'rimless',
         title: 'Rimless Collection',
         description: 'Minimalist & Lightweight',
-        image: 'frame_rimless.png'
+        image: 'IMG-20260206-WA0017.jpg'
     },
     {
         id: 'acetate',
         title: 'Bold Acetate',
         description: 'Statement & Stylish',
-        image: 'frame_acetate.png'
+        image: 'IMG-20260206-WA0018.jpg'
     },
     {
         id: 'titanium',
         title: 'Titanium Series',
         description: 'Durable & Elegant',
-        image: 'frame_titanium.png'
+        image: 'IMG-20260206-WA0019.jpg'
     },
     {
         id: 'kids',
         title: 'Kids Collection',
         description: 'Colorful & Durable',
-        image: 'frame_titanium.png'
-    }, {
+        image: 'IMG-20260206-WA0020.jpg'
+    },
+    {
         id: 'men',
         title: 'Men Collection',
-        description: 'Colorful & Durable',
-        image: 'frame_titanium.png'
-    },{
-        id: 'Women',
+        description: 'Classic & Masculine',
+        image: 'IMG-20260206-WA0021.jpg'
+    },
+    {
+        id: 'women',
         title: 'Women Collection',
-        description: 'Colorful & Durable',
-        image: 'frame_titanium.png'
+        description: 'Chic & Trendy',
+        image: 'IMG-20260206-WA0022.jpg'
+    },
+    {
+        id: 'sun',
+        title: 'Sun Protection',
+        description: 'UV Protection & Style',
+        image: 'IMG-20260206-WA0023.jpg'
+    },
+    {
+        id: 'reading',
+        title: 'Reading Glasses',
+        description: 'Clear Vision & Comfort',
+        image: 'IMG-20260206-WA0024.jpg'
+    },
+    {
+        id: 'sports',
+        title: 'Sports Active',
+        description: 'Performance & Durability',
+        image: 'IMG-20260206-WA0025.jpg'
+    },
+    {
+        id: 'designer',
+        title: 'Designer Series',
+        description: 'Exclusive & Premium',
+        image: 'IMG-20260206-WA0026.jpg'
+    },
+    {
+        id: 'premium',
+        title: 'Premium Gold',
+        description: 'Luxury & Sophistication',
+        image: 'IMG-20260206-WA0027.jpg'
     }
 ];
 

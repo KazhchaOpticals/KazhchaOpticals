@@ -163,10 +163,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (notificationBar) notificationBar.style.display = 'none';
     }
 
-    /* 
-    // --- AJAX Contact Form Submission ---
-    // (Disabled temporarily for testing and activation)
+    // --- Contact Form Submission (Email + Google Sheets) ---
     const contactForm = document.getElementById('contact-form');
+    // To enable Google Sheets, paste your Google Apps Script URL here
+    const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwSFqnMKL7X1FLMuUfMxFu2VSZFwewUGA33l4cvttGsnny_jaHYFhvS4Ol1aWbBoHlsyQ/exec";
+
     if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
@@ -180,6 +181,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const formData = new FormData(contactForm);
 
+            // 1. Send to Google Sheets (if URL is provided)
+            if (GOOGLE_SHEET_URL) {
+                fetch(GOOGLE_SHEET_URL, {
+                    method: 'POST',
+                    body: formData
+                }).catch(err => console.error("Google Sheets Error:", err));
+            }
+
+            // 2. Send to Email (FormSubmit)
             fetch(contactForm.action, {
                 method: 'POST',
                 body: formData,
@@ -221,5 +231,4 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
         });
     }
-    */
 });

@@ -91,13 +91,40 @@ document.addEventListener('DOMContentLoaded', function () {
     if (framesContainer && typeof frameCategories !== 'undefined') {
         framesContainer.innerHTML = ''; // Clear existing content if any
 
-        frameCategories.forEach(frame => {
+        frameCategories.forEach((frame, index) => {
             const col = document.createElement('div');
             col.className = 'col-md-4';
 
+            let imageHtml = '';
+            if (frame.images && frame.images.length > 0) {
+                // Create a mini carousel for multiple images
+                const carouselId = `carousel-${frame.id}-${index}`;
+                imageHtml = `
+                    <div id="${carouselId}" class="carousel slide carousel-fade h-100" data-bs-ride="carousel">
+                        <div class="carousel-inner h-100">
+                            ${frame.images.map((img, i) => `
+                                <div class="carousel-item h-100 ${i === 0 ? 'active' : ''}" data-bs-interval="3000">
+                                    <img src="${img}" alt="${frame.title}" class="img-fluid">
+                                </div>
+                            `).join('')}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon opacity-25" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next">
+                            <span class="carousel-control-next-icon opacity-25" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                `;
+            } else {
+                imageHtml = `<img src="${frame.image}" alt="${frame.title}" class="img-fluid">`;
+            }
+
             col.innerHTML = `
                 <div class="frame-category-card position-relative overflow-hidden rounded-4 shadow-sm h-100 bg-white">
-                    <img src="${frame.image}" alt="${frame.title}" class="img-fluid">
+                    ${imageHtml}
                     <div class="category-overlay d-flex flex-column justify-content-end p-4">
                         <h4 class="text-white fw-bold mb-1">${frame.title}</h4>
                         <p class="text-white-50 small mb-0">${frame.description}</p>
@@ -135,4 +162,64 @@ document.addEventListener('DOMContentLoaded', function () {
         if (offersSection) offersSection.style.display = 'none';
         if (notificationBar) notificationBar.style.display = 'none';
     }
+
+    /* 
+    // --- AJAX Contact Form Submission ---
+    // (Disabled temporarily for testing and activation)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            // Change button state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin me-2"></i> Sending...';
+
+            const formData = new FormData(contactForm);
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Success
+                        submitBtn.classList.remove('btn-primary');
+                        submitBtn.classList.add('btn-success');
+                        submitBtn.innerHTML = '<i class="fa-solid fa-check-circle me-2"></i> Message Sent!';
+                        contactForm.reset();
+
+                        // Reset button after 5 seconds
+                        setTimeout(() => {
+                            submitBtn.classList.remove('btn-success');
+                            submitBtn.classList.add('btn-primary');
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                        }, 5000);
+                    } else {
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    submitBtn.classList.remove('btn-primary');
+                    submitBtn.classList.add('btn-danger');
+                    submitBtn.innerHTML = '<i class="fa-solid fa-triangle-exclamation me-2"></i> Error. Try Again.';
+                    submitBtn.disabled = false;
+
+                    setTimeout(() => {
+                        submitBtn.classList.remove('btn-danger');
+                        submitBtn.classList.add('btn-primary');
+                        submitBtn.innerHTML = originalText;
+                    }, 5000);
+                });
+        });
+    }
+    */
 });

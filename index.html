@@ -528,25 +528,30 @@
         <div class="col-lg-6">
           <div class="bg-white text-dark p-4 p-md-5 rounded-4 shadow-lg">
             <h3 class="fw-bold mb-4">Send us a Message</h3>
-            <form>
+            <form id="contact-form" action="https://formsubmit.co/infokazhchaopticals@gmail.com" method="POST">
+              <!-- FormSubmit Configuration -->
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="New Inquiry from Kazhcha Opticals Website">
+
               <div class="mb-3">
                 <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control bg-light border-0 py-3" id="name" placeholder="John Doe" />
+                <input type="text" class="form-control bg-light border-0 py-3" id="name" name="name"
+                  placeholder="John Doe" required />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control bg-light border-0 py-3" id="email"
-                  placeholder="name@example.com" />
+                <input type="email" class="form-control bg-light border-0 py-3" id="email" name="email"
+                  placeholder="name@example.com" required />
               </div>
               <div class="mb-3">
                 <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control bg-light border-0 py-3" id="phone"
+                <input type="tel" class="form-control bg-light border-0 py-3" id="phone" name="phone"
                   placeholder="+91 90000 00000" />
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Message / Service Needed</label>
-                <textarea class="form-control bg-light border-0 py-3" id="message" rows="4"
-                  placeholder="I would like to book an eye test..."></textarea>
+                <textarea class="form-control bg-light border-0 py-3" id="message" name="message" rows="4"
+                  placeholder="I would like to book an eye test..." required></textarea>
               </div>
               <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill fw-bold">
                 Send Message

@@ -45,9 +45,9 @@ const frameCategories = [
 
 // --- Discount Section Configuration ---
 const discountOffer = {
-    isActive: false, // Set to false to hide the discount section
-    title: "Reflecting Vision - Monsoon Sale",
-    description: "Buy any 2 frames and get flat 50% discount on lenses.",
+    isActive: true, // Set to false to hide the discount section
+    title: "The Future of Vision: ",
+    description: "Premium Progressive Lenses at Half the Price 50% off.",
     buttonText: "Claim Offer",
     buttonLink: "#contact"
 };
